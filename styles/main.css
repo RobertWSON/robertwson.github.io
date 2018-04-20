@@ -1,0 +1,24 @@
+body {
+    background-color: blanchedalmond;
+}
+div {align-content: center; height: auto; width: auto
+}
+
+a:link {
+    color: maroon
+}
+a:hover {
+    color: lightslategray
+}
+a:visited {
+    color: beige
+}
+h1 {
+    color: brown; text-align: center
+}
+h4 {
+    color: black; text-align: left 
+}
+ul {
+    list-style-type: circle
+}
