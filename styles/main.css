@@ -1,17 +1,22 @@
 body {
     background-color: blanchedalmond;
 }
-div {align-content: center; height: auto; width: auto
+navbar {background-color: mediumturquoise; 
+        float: center; 
+        height: 200px; 
+        width: 600px; 
+        border: 1px solid black; 
+        padding: 5px
 }
 
 a:link {
     color: maroon
 }
 a:hover {
-    color: lightslategray
+    color: saddlebrown
 }
 a:visited {
-    color: beige
+    color: navy
 }
 h1 {
     color: brown; text-align: center
