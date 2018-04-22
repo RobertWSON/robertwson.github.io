@@ -9,7 +9,5 @@
     "args": [
         "${file}"
     ],
-    "problemMatchers": [
-        "$go"
-    ]
+    "problemMatchers": []
 }

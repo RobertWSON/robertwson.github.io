@@ -1,29 +1,28 @@
 body {
-    background-color: blanchedalmond;
+    background-color: blanchedalmond; margin-top: 50px
 }
-navbar {background-color: mediumturquoise; 
-        float: center; 
-        height: 200px; 
-        width: 600px; 
+#navbar a {background-color: aliceblue; 
+        align-content: center; 
+        height: 25px; 
+        width: 350px; 
         border: 1px solid black; 
-        padding: 5px
+        padding: 10px
 }
-
-a:link {
-    color: maroon
+#navbar a:link {
+    color: maroon; text-decoration-line: none; align-content: center
 }
-a:hover {
-    color: saddlebrown
+#navbar a:hover {
+    color: saddlebrown; text-decoration-line: none
 }
-a:visited {
-    color: navy
+#navbar a:visited {
+    color: navy; text-decoration-line: none
 }
 h1 {
     color: brown; text-align: center
 }
-h4 {
-    color: black; text-align: left 
+h3 {
+    color: black; text-align: left; margin-left: 42px 
 }
 ul {
-    list-style-type: circle
+    list-style-type: circle; margin-left: 24px
 }
