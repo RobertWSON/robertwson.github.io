@@ -11,18 +11,31 @@ body {
 #navbar a:link {
     color: maroon; text-decoration-line: none; align-content: center
 }
-#navbar a:hover {
-    color: saddlebrown; text-decoration-line: none
-}
 #navbar a:visited {
     color: navy; text-decoration-line: none
 }
+#navbar a:hover {
+    color: saddlebrown; text-decoration-line: none
+}
+#navbar a:active {
+    color: black; text-decoration-line: none
+}
+
 h1 {
-    color: brown; text-align: center
+    color: brown; text-align: center; margin-top: 25px
 }
 h3 {
-    color: black; text-align: left; margin-left: 42px 
+    color: black; text-align: left; margin-left: 55px 
 }
 ul {
     list-style-type: circle; margin-left: 24px
+}
+img {
+    max-width: 400px;
+    max-height: 400px;
+    width: auto;
+    height:auto;
+    margin-left: 55px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
