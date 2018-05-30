@@ -86,6 +86,10 @@ p {
     font-weight: normal;
 }
 
+p.decsciption {
+    font-size: 1.3em    
+}
+
 .u-max-full-width {
     border: 2px solid blue;
 }
