@@ -1,0 +1,114 @@
+{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: blanchedalmond;
+    margin: 1.2%;
+    padding: 1.2%;
+}
+
+#container {
+    
+    margin: 0 auto;
+    padding: 1%;
+}
+
+#navbar a {background-color: aliceblue;
+        align-content: center; 
+        height: auto; 
+        width: auto; 
+        border: 1px solid black; 
+        padding: 0.3%;
+        border-radius: 1em;
+        display: inline-block; 
+        position: relative;
+        margin: auto;
+}
+#navbar a:link {
+    color: maroon; text-decoration-line: none; 
+}
+#navbar a:visited {
+    color: navy; text-decoration-line: none
+}
+#navbar a:hover {
+    color: saddlebrown; text-decoration-line: none
+}
+#navbar a:active {
+    color: black; text-decoration-line: none
+}
+#navbar a:focus {
+    color: blue; text-decoration-line: none
+}
+
+div {
+    padding: 0.2%;
+    justify-content: flex-start;
+}
+
+.intro {
+    font-size: 1.22em;
+}
+
+h1 {
+    color: brown; text-align: center; margin: 2.20%; padding: 1%; 
+}
+
+h2 {
+    text-align: center; 
+}
+
+h3 {
+    color: black; margin-left: 1%;
+}
+
+h4 {
+    color: darkgoldenrod 
+}
+
+h5 { 
+    font-style: italic; display: inline; font-weight: bold;
+}
+
+ul {
+    line-height: 160%; margin-left: 1%; list-style-position: outside; 
+    display: inline-block; font-weight: bold; list-style-type: circle; 
+}
+
+ul.styled-list {
+    font-weight: normal
+}
+
+p {
+    font-weight: normal;
+}
+
+.u-max-full-width {
+    border: 2px solid blue;
+}
+
+img {
+    max-width: 100%;
+    max-height: auto;
+    width: 460px;
+    height: auto;
+   
+}      
+
+.row-break {
+    height: 2.0em;
+}
+
+
+@media (max-width: 550px) {
+    img {
+        display: block;
+        width: 90%;
+        min-width: 160px;
+    }
+}
+
+
