@@ -1,10 +1,3 @@
-{
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-
 body {
     background-color: blanchedalmond;
 }
@@ -22,7 +15,7 @@ html, body {
 }
 
 .nav {    
-    text-align: justify; 
+    text-align: justify;
 }
 
 .menu {
@@ -36,7 +29,7 @@ html, body {
         align-content: center; 
         height: auto; 
         width: auto; 
-        border: 1px solid black; 
+        border: 1px solid black;         
         padding: 0.35%;
         border-radius: 0.8em;
         display: inline-block; 
@@ -73,7 +66,7 @@ label {
     display: none;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 550px) {
     label {
         display: block;
         cursor: pointer;
@@ -92,11 +85,11 @@ label {
         display: block;
     }
 
+    body {
+        background-color: dodgerblue;
+    }
+
 }
-
-
-
-
 
 
 div {
@@ -164,3 +157,29 @@ img {
 
 
 
+
+@media only screen and (min-width: 551px) and (max-width: 768px) {
+
+.columns {
+    float:left;
+    width: 100%;
+}
+
+.columns:first-child {
+    float: left;
+    width: 50%
+}    
+
+menu {
+    height: initial;
+    width: initial; 
+    margin: initial;
+    float: initial;
+    display: initial;
+}
+
+body {
+    background-color: azure;
+}
+
+}
