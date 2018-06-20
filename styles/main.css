@@ -11,41 +11,68 @@ html, body {
     padding: 1%;
 }
 
-.nav {    
-    text-align: justify;
-}
+
 
 .menu {
     margin: auto;
-    font-size: 1.13em;     
+    font-size: 1.13em;
+    padding: 0.35%;     
 }
 
-.menu a {
+ul.menu-ctn {
+    list-style: none;
+}
+
+.menu-ctn > li {
         clear: right;       
         background-color: aliceblue;
         align-content: center; 
         height: auto; 
         width: auto; 
         border: 1px solid black;         
-        padding: 0.35%;
+        padding: 0.35% 0.35%;
         border-radius: 0.8em;
         display: inline-block; 
         position: relative;
         margin: auto;
+        transition: all 0.8s ease;
 }
-.menu a:link {
+
+#dropdown {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background-color: coral
+    z-index: 1;
+    text-align: center;
+    left: 0;
+    top: 100%;
+}
+
+#dropdown li {
+    padding: 1%, 1%;
+
+}
+
+#dropdown li.active {
+    display: block
+}
+
+.menu-ctn li:link {
     color: maroon; text-decoration-line: none; 
 }
-.menu a:visited {
+.menu-ctn li:visited {
     color: navy; text-decoration-line: none
 }
-.menu a:hover {
-    color: saddlebrown; text-decoration-line: none
+.menu-ctn li:hover {
+    color: saddlebrown; text-decoration-line: none;
+    cursor: pointer;
+    background-color: beige
 }
-.menu a:active {
+.menu-ctn li:active {
     color: black; text-decoration-line: none
 }
-.menu a:focus {
+.menu-ctn li:focus {
     color: blue; text-decoration-line: none
 }
 
@@ -72,7 +99,7 @@ label {
         width: 100%;
         display: none;
     }
-    .menu a {
+    .menu-ctn li {
         display: block;
         border: 1px solid black; 
         margin: 0;
@@ -88,10 +115,7 @@ label {
 }
 
 
-div {
-    padding: 0.2%;
-    justify-content: flex-start;
-}
+
 
 .intro {
     font-size: 1.22em;
@@ -165,7 +189,7 @@ img {
     width: 100%;
 }
     
-.menu a {
+.menu-ctn li {
     height: initial;
     width: initial; 
     margin: initial;
