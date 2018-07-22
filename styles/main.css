@@ -11,109 +11,125 @@ html, body {
     padding: 1%;
 }
 
+/* Add an arctic blue background color to top navigation. Overflow relates to what should happen 
+if content overflows a links box  */
+.nav    {
+    overflow: hidden;
+    background-color: aliceblue 
+}
 
-
-.menu {
-    margin: auto;
+/* Style links inside navigation bar. Color relates to links color */
+.nav a  {
+    float: left;
+    display: block;
+    color: maroon;
+    text-align: center;
+    padding: 0.35%;
+    text-decoration: none;
     font-size: 1.13em;
-    padding: 0.35%;     
 }
 
-ul.menu-ctn {
-    list-style: none;
+/* Add an active class to highlight current page. Color relates to links color */
+.active {
+    background-color: teal;
+    color: maroon;
 }
 
-.menu-ctn > li {
-        clear: right;       
-        background-color: aliceblue;
-        align-content: center; 
-        height: auto; 
-        width: auto; 
-        border: 1px solid black;         
-        padding: 0.35% 0.35%;
-        border-radius: 0.8em;
-        display: inline-block; 
-        position: relative;
-        margin: auto;
-        transition: all 0.8s ease;
+/* Hide link that should open and close top navigation on small screens */
+.nav .icon  {
+    display: none;
 }
 
-#dropdown {
+/* Dropdown container - needed to position dropdown content */
+.dropdown   {
+    float: left;
+    overflow: hidden;
+}
+
+/* Style dropdown button to fit inside top navigation */
+.dropdown  .dropbtn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0%
+}
+
+/* Style dropdown content. Note that it is hidden by default */
+.dropdown-content   {
     display: none;
     position: absolute;
-    width: 100%;
-    background-color: coral
+    background-color: lightcoral;
+    min-width: 145px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    text-align: center;
-    left: 0;
-    top: 100%;
 }
 
-#dropdown li {
-    padding: 1%, 1%;
-
+/* Style links inside dropdown. Color relates to color of dropdown links */
+.dropdown-content a {
+    float: none;
+    color: brown;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
 }
 
-#dropdown li.active {
-    display: block
+/* Add dark background on top navigation links and dropdown button on hover */
+.nav a:hover, .dropdown:hover .dropbtn  {
+    background-color: slateblue;
+    color: saddlebrown;
 }
 
-.menu-ctn li:link {
-    color: maroon; text-decoration-line: none; 
-}
-.menu-ctn li:visited {
-    color: navy; text-decoration-line: none
-}
-.menu-ctn li:hover {
-    color: saddlebrown; text-decoration-line: none;
-    cursor: pointer;
-    background-color: beige
-}
-.menu-ctn li:active {
-    color: black; text-decoration-line: none
-}
-.menu-ctn li:focus {
-    color: blue; text-decoration-line: none
+/* Add a alice blue background to dropdown links on hover */
+.dropdown-content a:hover   {
+    background-color: aliceblue;
+    color: saddlebrown;
 }
 
-label {
-    margin: 0 40px 0 0;
-    font-size: 26px;
-    line-height: 70px;
-    display: none;
-    width: 26px;
-    float: right;
+/* Show dropdown menu when user moves mouse over dropdown button */
+.dropdown:hover .dropdown-content   {
+    display: block;
 }
 
-#toggle {
-    display: none;
-}
 
-@media only screen and (max-width: 550px) {
-    label {
-        display: block;
-        cursor: pointer;
-    }
-    .menu {
-        text-align: center;
-        width: 100%;
+/* When screen is less than 550px wide, hide all links, except for the first one ("Home").   
+Show the link that should contain the top navigation icon */
+@media screen and (max-width: 550px) {
+    .nav a:not(:first-child),  .dropdown  .dropbtn  {
         display: none;
     }
-    .menu-ctn li {
-        display: block;
-        border: 1px solid black; 
-        margin: 0;
-    }
-    #toggle:checked + .menu {
+    .nav a.icon  {
+        float: right;
         display: block;
     }
 
     body {
         background-color: dodgerblue;
     }
-
 }
 
+/* The "responsive" class is added to the top navigation with Javascript when user clicks on icon.
+This class makes the top navigation look good on small screens 
+(displays links vertically instead of horizontally) */
+@media screen and (max-width: 550px)  {
+    .nav.responsive  {position: relative;}
+    .nav.responsive .icon   {
+        position: absolute;
+        right: 0;        
+        top: 0;
+    }
+    .nav.responsive .dropdown   {float: none;}  
+    .nav.responsive .dropdown-content   {position: relative;}
+    .nav.responsive .dropdown   .dropbtn    {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
+}
 
 
 
@@ -143,7 +159,7 @@ h5 {
 
 ul {
     line-height: 160%; margin-left: 1%; list-style-position: outside; 
-    display: inline-block; font-weight: bold; list-style-type: circle; 
+    display: block; font-weight: bold; list-style-type: circle; 
 }
 
 ul.styled-list {
@@ -182,23 +198,79 @@ img {
 
 
 
-@media only screen and (min-width: 551px) and (max-width: 768px) {
+/* When screen is more than 550px wide, display dropdown buttons and show drop down links when user has clicked dropdown icon on dropdown button.   
+Show the link that should contain the top navigation icon */
+@media screen and (min-width: 551px)    {
+    .nav a:not(:first-child),  .dropdown  .dropbtn  {
+        display: inline-block;
+    }
+    .nav a.icon  {
+        
+        display: inline-block
+    }
 
-.columns {
+    .columns {
     float:left;
     width: 100%;
-}
+    }
     
-.menu-ctn li {
-    height: initial;
-    width: initial; 
-    margin: initial;
-    float: initial;
-    display: initial;
+    body {
+        background-color: azure;
+    }
 }
 
-body {
-    background-color: azure;
+/* The "responsive" class is added to the top navigation with Javascript when user clicks on icon.
+This class makes the top navigation look good on small screens 
+(displays links vertically instead of horizontally) */
+@media screen and (min-width: 551px)    {
+    .nav.responsive  {position: relative;}
+    .nav.responsive .icon   {
+        position: absolute;
+        right: 0;        
+        top: 0;
+    }
+    .nav.responsive .dropdown   {float: none;}  
+    .nav.responsive .dropdown-content   {position: relative;}
+    .nav.responsive .dropdown   .dropbtn    {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
 }
 
+
+
+/* When screen is less than 550px wide, hide all links, except for the first one ("Home").   
+Show the link that should contain the top navigation icon */
+@media screen and (min-width: 551px) {
+    .nav a:not(:first-child),  .dropdown  .dropbtn  {
+        display: none;
+    }
+    .nav a.icon  {
+        float: right;
+        display: block;
+    }
+    
+    body {
+        background-color: blanchedalmond;
+    }
+}
+
+/* The "responsive" class is added to the top navigation with Javascript when user clicks on icon.
+This class makes the top navigation look good on small screens 
+(displays links vertically instead of horizontally) */
+@media screen and (min-width: 769px) {
+    .nav.responsive  {position: relative;}
+    .nav.responsive .icon   {
+        position: absolute;
+        right: 0;        
+        top: 0;
+    }
+    .nav.responsive .dropdown   {float: none;}  
+    .nav.responsive .dropdown-content   {position: relative;}
+    .nav.responsive .dropdown   .dropbtn    {
+        display: block;
+        width: 100%;
+        text-align: left;
+    }
 }

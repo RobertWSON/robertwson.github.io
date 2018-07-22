@@ -1,8 +1,12 @@
 console.log("This is working");
 
-document.getElementById("menu").addEventListener("click", openMenu);
-
-function openMenu() {
-
-    document.getElementById("dropdown").classList.toggle("active")
+/* Toggle between adding and removing the "responsive" class to nav when the user clicks on the icon
+*/
+function myMenu()  {
+    var respond = document.getElementsById("myTopnav");
+    if  (respond.className === "nav")   {
+        respond.className += "responsive";
+    }   else    {
+            respond.className = "nav";
+    }
 }
