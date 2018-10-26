@@ -200,7 +200,7 @@ img {
 
 /* When screen is more than 550px wide, display dropdown buttons and show drop down links when user has clicked dropdown icon on dropdown button.   
 Show the link that should contain the top navigation icon */
-@media screen and (min-width: 551px)    {
+@media screen and (min-width: 551px) and (max-width: 768px)    {
     .nav a:not(:first-child),  .dropdown  .dropbtn  {
         display: inline-block;
     }
@@ -222,7 +222,7 @@ Show the link that should contain the top navigation icon */
 /* The "responsive" class is added to the top navigation with Javascript when user clicks on icon.
 This class makes the top navigation look good on small screens 
 (displays links vertically instead of horizontally) */
-@media screen and (min-width: 551px)    {
+@media screen and (min-width: 551px) and (max-width: 768px)    {
     .nav.responsive  {position: relative;}
     .nav.responsive .icon   {
         position: absolute;
@@ -242,7 +242,7 @@ This class makes the top navigation look good on small screens
 
 /* When screen is less than 550px wide, hide all links, except for the first one ("Home").   
 Show the link that should contain the top navigation icon */
-@media screen and (min-width: 551px) {
+@media screen and (min-width: 551px) and (max-width: 768px) {
     .nav a:not(:first-child),  .dropdown  .dropbtn  {
         display: none;
     }
